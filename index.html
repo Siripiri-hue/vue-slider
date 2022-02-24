@@ -14,7 +14,8 @@
     <section class="section">
         <div id="carousel-wrapper">
             <div id="img-wrapper">
-                <div v-for="item in slides" class="img-lg">
+                <div v-for="(item, index) in slides" class="img-lg" 
+                :class="[(index == currentSlide) ? 'active' : '']">
                     <img :src="item.photo" alt="">
                 </div>
             </div>
