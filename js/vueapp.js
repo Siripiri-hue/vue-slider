@@ -43,12 +43,27 @@ const vueSlider = new Vue (
 
             // }
             goUp: function() {
-                currentSlide--;  
+                // console.log("hai cliccato freccia su");
+                
+                if (this.currentSlide === 0)
+                {
+                    this.currentSlide = (this.slides.length - 1);
+                    // console.log(this.slides.length);
+                    // console.log(this.currentSlide);
+                }
+                else
+                {
+                    this.currentSlide--;
+                    // console.log(this.currentSlide);
+                }
             },
 
             goDown: function() {
-                currentSlide++;
-            }
+                if (this.currentSlide === (this.slides.length - 1))
+                    this.currentSlide = 0;
+                else
+                    this.currentSlide++;
+            },
         }
     })
 
