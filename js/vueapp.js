@@ -35,13 +35,20 @@ const vueSlider = new Vue (
             }],
             idList: "img-wrapper miniatures up down arrows",
             classList: "img-lg info title caption lil-img active active-xs",
-            currentSlide: 3,
+            currentSlide: 2,
         },
         methods: {
             // showImg: function() {
             //     if (active === true)
 
             // }
+            goUp: function() {
+                currentSlide--;  
+            },
+
+            goDown: function() {
+                currentSlide++;
+            }
         }
     })
 
