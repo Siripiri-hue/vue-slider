@@ -26,7 +26,7 @@
             
             <div id="slider">
                 <div id="miniatures">
-                    <div v-for="item in slides" class="lil-img">
+                    <div v-for="(item, index) in slides" class="lil-img" :class="[(index == currentSlide) ? 'active-xs' : '']">
                         <img :src="item.photo" alt="">
                     </div>
                 </div>
