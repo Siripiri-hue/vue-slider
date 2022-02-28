@@ -64,6 +64,10 @@ const vueSlider = new Vue (
                 else
                     this.currentSlide++;
             },
+
+            goTo: function(i) {
+                this.currentSlide = i;
+            }
         }
     })
 
